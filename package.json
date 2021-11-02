@@ -1,0 +1,19 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Practica de promesas con la creación de una pokedex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahcordoba/Pokedex.git"
+  },
+  "author": "Miguel Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahcordoba/Pokedex/issues"
+  },
+  "homepage": "https://github.com/Mahcordoba/Pokedex#readme"
+}
