@@ -47,66 +47,102 @@ html
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
 }
-.poke-botton-botton
-{
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-}
 .poke-botton-top
 {
     display: flex;
+    align-items: flex-end;
+    position: relative;
 }
 .poke-top-botton
 {
     display: flex;
 }
-.centro
+.poke-botton-botton
 {
-    width: 50%;
-    height: 100%;
-    display: flex;
-}
-.media
-{
-    width: 45%;
-    height: 100%;
-    background-color: black;
-}
-.othermedia
-{
-    width: 55%;
-    height: 100%;
-    display: flex;
-}
-.arriba
-{
-    flex-direction: column-reverse;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
 }
 .separador
 {
-    width: 100%;
+    width: 30%;
     height: 10px;
     background-color: white;
-    border-top: 3px solid gray;
-    border-bottom: 3px solid gray;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
-.izquierda
+.centro
 {
-    flex-direction: row-reverse;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
 }
-.medialeft
+.centro::after
+{
+    content: "";
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    position: absolute;
+}
+.top
 {
     border-top-left-radius: 150px;
-}
-.medialef--botton
-{
-    border-bottom-left-radius:150px;
-}
-.mediaright
-{
     border-top-right-radius: 150px;
+    border: 2px solid gray;
+    border-bottom: none;
 }
-.mediaright--botton
+.top::after
 {
-    border-bottom-right-radius:150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border: 2px solid gray;
+    border-bottom: none;
+    z-index: 1;
+}
+.botton
+{
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border: 2px solid gray;
+    border-top: none;
+}
+.centro.botton
+{
+    align-items: flex-start;
+}
+.botton::after
+{
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border: 2px solid gray;
+    border-top: none;
+}
+.pokebol
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: calc(50% - 25px);
+    top: calc(100% - 25px);
+    z-index: 2;
+    background-image: url("../sourses/img/pokebold.jpg");
+    background-position: center;
+    background-size: 175%;
+    background-repeat: no-repeat;
+}
+.pokebol:hover
+{
+    width: 70px;
+    height: 70px;
+    right: calc(50% - 35px);
+    top: calc(100% - 35px);
+}
+.invisible
+{
+    display: none;
 }
