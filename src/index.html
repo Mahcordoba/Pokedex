@@ -13,24 +13,22 @@
             <div class="pokedex">
                 <div class="poke poke-top-top"></div>
                 <div class="poke poke-botton-top">
+                  <div class="pokebol especial invisible"></div>
                   <div class="separador"></div>
                   <div class="centro top">
                   </div>
                   <div class="separador"></div>
                 </div>
             </div>
-            <div class="center invisible">
-              <div class="card">
-                <h2><span>Nombre poke</span> <span>#####</span></h2>
-                <img class="imagen" src="./sourses/img/prb.webp" alt="Imagen de un pokemón">
-                <div class="tipos"><img src="./sourses/tipos/fire.png" alt="Tipo"><img src="./sourses/tipos/flying.png" alt="Tipo"></div>
-                <p><b>Peso: </b></p>
-                <p><b>Altura: </b></p>
+            <div id="content-card" class="center invisible">
+              <div class="loanding">
+                <img src="./sourses/img/pikachu.gif" alt="pikachu corriendo">
+                <span>Cargando</span>
               </div>
             </div>
             <div class="pokedex">
               <div class="poke poke-top-botton">
-                <div class="pokebol"></div>
+                <div class="pokebol normal" onclick="aleatorio()"></div>
                 <div class="separador"></div>
                 <div class="centro botton"></div>
                 <div class="separador"></div>
@@ -39,5 +37,17 @@
           </div>
         </div>
     </main>
+    <template id="template">
+      <div class="card invisible">
+        <h2><span>N. °<b class="number"></b> </span> <span class="name">Nombre poke</span></h2>
+        <img class="imagen"  alt="Imagen de un pokemón">
+        <div class="tipos"></div>
+        <p class="peso"><b>Peso: </b></p>
+        <p class="altura"><b>Altura: </b></p>
+      </div>
+    </template>
+    <script src="./js/tipos.js"></script>
+    <script src="./utils/fechdata.js"></script>
+    <script src="./js/promesa.js"></script>
 </body>
 </html>

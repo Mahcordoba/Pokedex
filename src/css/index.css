@@ -14,17 +14,20 @@ html
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: #e1e1e3;
 }
 .contenedor
 {
     width: 100%;
+    max-width: 400px;
     height: 50%;
+    max-height: 385px;
+    margin: auto;
 }
 .contenedor.open
 {
     height: 100%;
-    background-color: indigo;
+    max-height: 800px;
 }
 .contenedor .pokedex
 {
@@ -46,11 +49,14 @@ html
 {
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
+    position: relative;
+    overflow: hidden;
 }
 .poke-botton-top
 {
     display: flex;
     align-items: flex-end;
+    position: relative;
 }
 .poke-top-botton
 {
@@ -127,52 +133,59 @@ html
     height: 50px;
     border-radius: 50%;
     position: absolute;
+    z-index: 2;
+}
+.normal
+{
     right: calc(50% - 25px);
     bottom: calc(100% - 25px);
-    z-index: 2;
     background-image: url("../sourses/img/pokebold.jpg");
     background-position: center;
     background-size: 175%;
     background-repeat: no-repeat;
 }
-.pokebol:hover
+.especial
 {
-    width: 70px;
-    height: 70px;
-    right: calc(50% - 35px);
-    bottom: calc(100% - 35px);
+    right: calc(50% - 25px);
+    top: calc(100% - 25px);
+    height: 25px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    background-color: #a7dfe2;
 }
+
 /*Centro de la pokedex*/
 .center
 {
     width: 90%;
     height: 50%;
-    background-color: lightblue;
+    background-color: #a7dfe2;
     margin: auto;
-    border-right: 10px solid black;
-    border-left: 10px solid black;
+    border-right: 10px solid #58beb7;
+    border-left: 10px solid #58beb7;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card
 {
-   padding: 20px;
-   border: 6px solid black;
+   width: 80%;
+   padding: 15px;
+   border: 6px solid #64cce0;
    border-radius: 15px;
-   background-color: aqua;
+   background-color: #81d3e4;
    text-align: center;
 }
 .imagen
 {
-    width: 160px;
-    border-radius: 30px;
-    border: 2px solid black;
+    width: 55%;
+    border-radius: 15px;
+    border: 2px solid #3ac2dd;
     margin-top: 10px;
 }
 .card p 
 {
-    width: 100px;
+    width: 140px;
     margin: auto;
     font-size: 1.2rem;
     padding: 2px 0;
@@ -187,7 +200,61 @@ html
     margin-right: 5px;
     margin: 5px 0;
 }
+.loanding
+{
+    height: 70px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loanding img
+{
+    width: 64px;
+    margin-right: 10px;
+}
 .invisible
 {
     display: none;
 }
+@media only screen and (orientation : landscape) and (max-width: 900px) 
+{
+    .main
+    {
+        background-color: black;
+        width: 100%;
+        min-width: 640px;
+        height: 100%;
+        min-height: 360px;
+        overflow: hidden;
+    }
+    .contenedor
+    {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(180deg);
+        min-width: 340px;
+        max-width: 400px;
+        height: 50vw;
+        
+    }
+    .contenedor.open
+    {
+        min-height: 640px;
+        max-height: 800px;
+        min-width: 360px;
+        max-width: 400px;
+        position: absolute;
+        left: 120px;
+    }    
+}
+
+/* .pokebol:hover
+{
+    width: 70px;
+    height: 70px;
+    right: calc(50% - 35px);
+    bottom: calc(100% - 35px);
+} */
